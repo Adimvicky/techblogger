@@ -14,9 +14,9 @@ app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}))
 
-app.use(express.static(path.join(__dirname,'..','assets')));
+app.use(express.static(path.join(__dirname,'assets')));
 app.get('/', function (req,res) {
-    let indexHtml = path.join(__dirname,'..','index.html');
+    let indexHtml = path.join(__dirname,'assets','index.html');
     console.log(indexHtml)
     res.sendFile(indexHtml);
 });
