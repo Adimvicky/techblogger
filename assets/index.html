@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tech Blogging and Content for All</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+		<link rel="stylesheet" href="css/nouislider.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <div class="main-section">
+
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">TechBlogger</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link icon d-flex align-items-center" data-toggle="dropdown">
+                <i class="ion-ios-apps mr-2"></i>
+                My Account
+                <b class="caret"></b>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#signupModal"><i class="ion-ios-apps mr-2"></i> Create an account</a>
+				<a href="#" class="dropdown-item" data-toggle="modal" data-target="#signinModal"><i class="ion-ios-document mr-2"></i> Signin</a>
+				<a href="#" class="dropdown-item signOutButton">Sign out</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link icon d-flex align-items-center"><i class="ion-ios-cloud-download mr-2"></i> Dashboard</a></li>
+	        </ul>
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-facebook"></i></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-twitter"></i></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i></a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+  	<section class="hero-wrap js-fullheight img" style="background-image: url(images/background.jpg);">
+  		<div class="overlay"></div>
+  		<div class="container">
+  			<div class="row description js-fullheight align-items-center justify-content-center">
+  				<div class="col-md-8 text-center">
+  					<div class="text">
+  						<h1>TechBlogger</h1>
+  						<h4 class="mb-5">Tech Blogging for all.</h4>
+  						<p><a href="#" class="btn btn-primary px-4 py-3" data-toggle="modal" data-target="#signupModal">Get Started</a></p>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+
+	  <!-- - - - - -end- - - - -  -->
+	 <section id="modals">
+		 <!-- Sign Up Modal -->
+		 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLongTitle">Create an account</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <div class="card card-login py-4">
+					  <form id="signupForm" class="form-login">
+						<div class="card-header card-header-primary text-center">
+						  <h4 class="card-title">Signup</h4>
+						</div>
+						<div class="card-body p-4">
+						  <div class="input-group mb-3">
+							<div class="input-group-prepend">
+							  <span class="input-group-text">
+								<i class="ion-ios-contact"></i>
+							  </span>
+							</div>
+							<input required type="text" class="form-control name" placeholder="First Name...">
+						  </div>
+						  <div class="input-group mb-3">
+							<div class="input-group-prepend">
+							  <span class="input-group-text">
+								<i class="ion-ios-paper-plane"></i>
+							  </span>
+							</div>
+							<input required type="email" class="form-control email" placeholder="Email...">
+						  </div>
+						  <div class="input-group mb-3">
+							<div class="input-group-prepend">
+							  <span class="input-group-text">
+								<i class="ion-ios-lock"></i>
+							  </span>
+							</div>
+							<input required="true" type="password" class="form-control password" placeholder="Password...">
+						  </div>
+						</div>
+						<div class="footer text-center">
+						  <button type="submit" href="#" id="signupButton" class="btn btn-primary">Create Account</button>
+						</div>
+					  </form>
+					</div>
+				</div>
+				<!-- <div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-primary">Save changes</button>
+				</div> -->
+			  </div>
+			</div>
+		  </div>
+
+		 <!-- Signin Modal -->
+		  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Log in to your account</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<div class="card card-login py-4">
+						<form id="signinForm" class="form-login" method="" action="">
+						  <div class="card-header card-header-primary text-center">
+							<h4 class="card-title">Login</h4>
+						  </div>
+						  <div class="card-body p-4">
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+								<span class="input-group-text">
+								  <i class="ion-ios-paper-plane"></i>
+								</span>
+							  </div>
+							  <input required type="email" class="form-control email" placeholder="Email...">
+							</div>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+								<span class="input-group-text">
+								  <i class="ion-ios-lock"></i>
+								</span>
+							  </div>
+							  <input required type="password" class="form-control password" placeholder="Password...">
+							</div>
+						  </div>
+						  <div class="footer text-center">
+							<button type="submit" class="btn btn-primary signinButton">Login</button>
+						  </div>
+						</form>
+					  </div>
+				  </div>
+				  <!-- <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				  </div> -->
+				</div>
+			  </div>
+			</div>
+
+	 </section>
+
+
+	  <footer class="ftco-section ftco-section-2">
+	  	<div class="col-md-12 text-center">
+          <p class="mb-0">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>
+              document.write(new Date().getFullYear());
+
+            </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+	  </footer>
+
+  </div>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/moment-with-locales.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="js/forms.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tech Blogging and Content for All</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+		<link rel="stylesheet" href="css/nouislider.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- <script src="js/jquery.min.js"></script>
+    <script src="js/dashboard.js"></script> -->
+    <div class="navbar-transparent px-md-0 img pb-md-5 navbar-wrap bg-transparent" style="background-image: url(images/background2.jpg); height: 400px;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row pt-md-4 pb-md-5">
+                <div class="col-md-12">
+                    <nav class="navbar px-0 navbar-expand-lg navbar-light">
+                      <a class="navbar-brand" href="index.html">TechBlogger</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="oi oi-menu"></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarsExample08">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item d-flex active">
+                            <a class="nav-link d-flex align-items-center" href="#posts" data-toggle="tab">My Posts <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item d-flex">
+                            <a id="profileButton" class="nav-link d-flex align-items-center" href="#profile" data-toggle="tab">Profile</a>
+                          </li>
+                          <li class="nav-item d-flex dropdown">
+                            <a class="nav-link d-flex align-items-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Account
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item signOutButton" href="#">Sign out</a>
+
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content rounded mt-4">
+        <div class="tab-pane container p-4 active" id="posts">
+            <section class="ftco-section pb-0 mx-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 heading-title">
+                    <h1 class="mb-4">My Posts</h1>
+                  </div>
+                    </div>
+                </div>
+            <div class="row" id="postsContainer">
+
+            </div>
+            <button data-toggle="modal" data-target="#createPostModal" type="button" class="btn btn-primary btn-round" style="position: fixed;right:60px;bottom:60px;">
+              <i class="ion-ios-heart"></i> New Post
+            </button>
+        </section>
+        </div>
+        <div class="tab-pane container p-4 fade" id="profile">
+            <!-- <div class="row">
+              <div class="col-md-8 mb-4 mb-md-0"> -->
+                <div class="card card-style text-center" style="max-width: 500px;margin: 0 auto;">
+                  <h5 class="card-header py-4">
+                    My Profile
+                  </h5>
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="images/profile-icon.jfif" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Profile Details</h5>
+                        <table class="table table-borderless">
+                          <thead>
+
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Name : </td>
+                              <td class="userName"></td>
+                            </tr>
+                            <tr>
+                              <td>Email : </td>
+                              <td class="userEmail"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#editProfileModal">Edit</a>
+                      </div>
+                    </div>
+                </div>
+              <!-- </div>
+            </div> -->
+        </div>
+      </div>
+
+<!-- Edit profile modal-->
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit Your Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="card card-login py-4">
+      <form id="updateUserForm" class="form-login" method="" action="">
+        <div class="card-header card-header-primary text-center">
+        <h4 class="card-title"></h4>
+        </div>
+        <div class="card-body p-4">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-contact"></i>
+          </span>
+          </div>
+          <input type="text" class="form-control userName" placeholder="First Name...">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-paper-plane"></i>
+          </span>
+          </div>
+          <input type="email" class="form-control userEmail" placeholder="Email...">
+        </div>
+        <!-- <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-lock"></i>
+          </span>
+          </div>
+          <input type="password" class="form-control" placeholder="Password...">
+        </div> -->
+        </div>
+        <div class="footer text-center">
+        <a id="updateUserButton" href="#" class="btn btn-primary">Save Changes</a>
+        </div>
+      </form>
+      </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End editProfileModal-->
+
+<!-- Create Post Modal-->
+<div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create a new post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="card card-login py-4">
+      <form id="createPostForm" class="form-login" method="" action="">
+        <div class="card-header card-header-primary text-center">
+        <h4 class="card-title">New Post</h4>
+        </div>
+        <div class="card-body p-4">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-contact"></i>
+          </span>
+          </div>
+          <input type="text" class="form-control title" placeholder="Title">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-paper-plane"></i>
+          </span>
+          </div>
+          <input type="text" class="form-control subtitle" placeholder="Subtitle">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-lock"></i>
+          </span>
+          </div>
+          <textarea rows="" class="form-control body" placeholder="Post body goes here">
+          Post body goes here
+          </textarea>
+        </div>
+
+        </div>
+        <div class="footer text-center">
+        <button type="submit" class="btn btn-primary">Create post</button>
+        </div>
+      </form>
+      </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End Create post modal-->
+
+
+
+
+<!-- Edit Post Modal-->
+<div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Update this post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="card card-login py-4">
+      <form id="editPostForm" class="form-login" method="" action="">
+        <div class="card-header card-header-primary text-center">
+        <h4 class="card-title">Edit Post</h4>
+        </div>
+        <div class="card-body p-4">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-contact"></i>
+          </span>
+          </div>
+          <input type="text" class="form-control title" placeholder="Title">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-paper-plane"></i>
+          </span>
+          </div>
+          <input type="text" class="form-control subtitle" placeholder="Subtitle">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="ion-ios-lock"></i>
+          </span>
+          </div>
+          <textarea rows="" class="form-control body" placeholder="Post body goes here">
+          Post body gets filled here
+          </textarea>
+        </div>
+
+        </div>
+        <div class="footer text-center">
+        <button id="editPostButton" href="#" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+      </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End Edit post modal-->
+
+<footer class="ftco-section ftco-section-2">
+  <div class="col-md-12 text-center">
+      <p class="mb-0">
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>
+          document.write(new Date().getFullYear());
+
+        </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+    </div>
+</footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/moment-with-locales.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/dashboard.js"></script>
+
+
+  </body>
+</html>
